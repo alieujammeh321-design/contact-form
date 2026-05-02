@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+
+    <form novalidate>
+      <!-- Name Row -->
+      <div class="row">
+        <div class="input-group">
+          <label for="first-name">First Name *</label>
+          <input type="text" id="first-name" required aria-describedby="first-name-error">
+          <p class="error-message" id="first-name-error" aria-live="assertive"></p>
+        </div>
+
+        <div class="input-group">
+          <label for="last-name">Last Name *</label>
+          <input type="text" id="last-name" required aria-describedby="last-name-error">
+          <p class="error-message" id="last-name-error" aria-live="assertive"></p>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" required aria-describedby="email-error">
+        <p class="error-message" id="email-error" aria-live="assertive"></p>
+      </div>
+
+      <!-- Query Type -->
+      <div class="input-group">
+        <p class="field-label">Query Type *</p>
+
+        <div class="query-options">
+          <input type="radio" id="general" name="query" value="general">
+          <label for="general" class="option">General Enquiry</label>
+
+          <input type="radio" id="support" name="query" value="support">
+          <label for="support" class="option">Support Request</label>
+        </div>
+        <p class="error-message" id="query-error" aria-live="assertive"></p>
+      </div>
+
+      <!-- Message -->
+      <div class="input-group">
+        <label for="message">Message *</label>
+        <textarea id="message" rows="5" required aria-describedby="message-error"></textarea>
+        <p class="error-message" id="message-error" aria-live="assertive"></p>
+      </div>
+
+      <!-- Consent -->
+      <div class="checkbox">
+        <input type="checkbox" id="consent">
+        <label for="consent">I consent to being contacted by the team *</label>
+      </div>
+      <p class="error-message" id="consent-error" aria-live="assertive"></p>
+
+      <!-- Submit -->
+      <button type="submit">Submit</button>
+
+      <div class="success-message" style="display:none;" aria-live="polite" tabindex="-1">
+        <p>Message Sent!</p>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </form>
+  </div>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
